@@ -49,7 +49,8 @@ $(document).ready(function() {
     var selectedIface = $('#dev_select').val();
 
     if (msg["stats"] && msg.stats.iface == selectedIface) {
-      handleMsgUpdateStats(samplePeriod, msg.stats);
+      var visibleSeries = $("#chopts_series option:selected").val();
+      handleMsgUpdateStats(samplePeriod, msg.stats, visibleSeries);
     } else if (msg["ifaces"]) {
       handleMsgIfaces(msg["ifaces"]);
     } else if (msg["netem_params"]) {
