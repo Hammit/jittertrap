@@ -48,3 +48,9 @@ Build:
 
 Run:  
 `$ sudo backend/jittertrap`
+
+Note:
+By default, Jittertrap listens on port 80. To adjust this to your desired port, you need to set WEB_SEVER_PORT when building.
+E.g.
+`$ make WEB_SERVER_DOCUMENT_ROOT=$(pwd)/frontend/output WEB_SERVER_PORT=8000`
+
